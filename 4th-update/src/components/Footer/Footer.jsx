@@ -1,7 +1,11 @@
 import { Button } from "./FooterStyles";
 
 const Footer = () => {
-  return <Button>See tracking Details</Button>;
+  return (
+    <Button>
+      <h3>See tracking Details</h3>
+    </Button>
+  );
 };
 
 export default Footer;

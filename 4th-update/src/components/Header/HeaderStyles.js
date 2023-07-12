@@ -5,16 +5,20 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 
   h1 span {
-    color: #707070;
-    margin-right: 1em;
+    color: grey;
+    margin-right: 2em;
   }
 `;
 
 export const DetailsColumn = styled.div`
   line-height: 0.75;
 
+  h2 {
+    color: black;
+  }
+
   h2 + h2 {
     margin-left: 8%;
-    color: #707070;
+    color: grey;
   }
 `;

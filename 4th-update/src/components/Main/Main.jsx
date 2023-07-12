@@ -6,7 +6,7 @@ const Main = () => {
     <div>
       <DeliveryTrackingBar />
       <Description>
-        Arriving by <span>&nbsp;Thursday, May 28.</span>
+        Arriving by <span> Thursday, May 28.</span>
       </Description>
     </div>
   );
