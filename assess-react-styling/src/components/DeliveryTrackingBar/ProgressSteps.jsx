@@ -98,7 +98,7 @@ const ProgressSteps = () => {
       <StepsStages>
         <li>
           <h3>Preparing Order</h3>
-          <span></span>
+          <span>&#10004;</span>
         </li>
         <li>
           <h3>Shipped</h3>
