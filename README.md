@@ -1,5 +1,5 @@
 # styling-assessment
-Shot at pixel-perfect styling
+Shot at pixel-perfect development
 
 For deployed version:
 Open [https://mish-css-assessment.netlify.app/](https://mish-css-assessment.netlify.app/) to view completed version.
