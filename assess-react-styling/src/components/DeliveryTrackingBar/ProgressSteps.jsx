@@ -70,6 +70,8 @@ const StepsStages = styled.ul`
     }
 
     &::before {
+      transition: background-color 3s ease-in-out;
+      background-color: var(--bar-color);
       content: "";
       position: absolute;
       width: 100%;
@@ -108,7 +110,7 @@ const ProgressSteps = () => {
   return (
     <>
       <StepsStages>
-        <li>
+        <li style={{ "--bar-color": step > 0 ? "#4d8721" : "#cecec9" }}>
           <h3 style={{ color: step > 0 ? "#4d8721" : "#cecec9" }}>
             Preparing Order
           </h3>
@@ -121,7 +123,7 @@ const ProgressSteps = () => {
             {step > 0 && String.fromCharCode(0x2713)}
           </span>
         </li>
-        <li>
+        <li style={{ "--bar-color": step > 1 ? "#4d8721" : "#cecec9" }}>
           <h3 style={{ color: step > 1 ? "#4d8721" : "#cecec9" }}>Shipped</h3>
           <span
             style={{
@@ -132,7 +134,7 @@ const ProgressSteps = () => {
             {step > 1 && String.fromCharCode(0x2713)}
           </span>
         </li>
-        <li>
+        <li style={{ "--bar-color": step > 2 ? "#4d8721" : "#cecec9" }}>
           <h3 style={{ color: step > 2 ? "#4d8721" : "#cecec9" }}>Delivered</h3>
           <span
             style={{
