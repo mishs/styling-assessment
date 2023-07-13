@@ -59,7 +59,7 @@ const StepsStages = styled.ul`
     }
 
     &:nth-child(2) span {
-      background-color: #fff;
+      background-color: #ffff;
       z-index: 1;
     }
 
@@ -77,7 +77,7 @@ const StepsStages = styled.ul`
       background-color: #cecec9;
       top: calc(150% + 1.5em / 2); /* Adjusted the top value */
       left: 50%;
-      transform: translateX(-49%);
+      transform: translateX(-51%);
       z-index: 1;
     }
     &:first-child::before {
