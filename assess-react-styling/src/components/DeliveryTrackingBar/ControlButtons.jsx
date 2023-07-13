@@ -15,11 +15,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const ControlButtons = ({ next, prev }) => {
+const ControlButtons = ({ next, prev, reset }) => {
   return (
     <Wrapper>
       <button onClick={prev}>Previous</button>
-      <button onClick={next}>Next</button>
+      <button onClick={next}>{reset ? "Reset" : "Next"}</button>
     </Wrapper>
   );
 };

@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import ControlButtons from "./ControlButtons";
 
@@ -85,6 +85,7 @@ const StepsStages = styled.ul`
       left: 70%;
       background-color: #4d8721;
     }
+
     &:last-child::before {
       width: 110%;
       left: 25%;
@@ -93,23 +94,57 @@ const StepsStages = styled.ul`
 `;
 
 const ProgressSteps = () => {
+  const [step, setStep] = useState(0);
+
+  const next = () => {
+    if (step < 3) setStep(step + 1);
+    else setStep(0); // Reset if 'Next' clicked in step 3
+  };
+
+  const prev = () => {
+    if (step > 0) setStep(step - 1);
+  };
+
   return (
     <>
       <StepsStages>
         <li>
-          <h3>Preparing Order</h3>
-          <span>&#10004;</span>
+          <h3 style={{ color: step > 0 ? "#4d8721" : "#cecec9" }}>
+            Preparing Order
+          </h3>
+          <span
+            style={{
+              backgroundColor: step > 0 ? "#4d8721" : "#fff",
+              borderColor: step > 0 ? "#4d8721" : "#cecec9",
+            }}
+          >
+            {step > 0 && String.fromCharCode(0x2713)}
+          </span>
         </li>
         <li>
-          <h3>Shipped</h3>
-          <span></span>
+          <h3 style={{ color: step > 1 ? "#4d8721" : "#cecec9" }}>Shipped</h3>
+          <span
+            style={{
+              backgroundColor: step > 1 ? "#4d8721" : "#fff",
+              borderColor: step > 1 ? "#4d8721" : "#cecec9",
+            }}
+          >
+            {step > 1 && String.fromCharCode(0x2713)}
+          </span>
         </li>
         <li>
-          <h3>Delivered</h3>
-          <span></span>
+          <h3 style={{ color: step > 2 ? "#4d8721" : "#cecec9" }}>Delivered</h3>
+          <span
+            style={{
+              backgroundColor: step > 2 ? "#4d8721" : "#fff",
+              borderColor: step > 2 ? "#4d8721" : "#cecec9",
+            }}
+          >
+            {step > 2 && String.fromCharCode(0x2713)}
+          </span>
         </li>
       </StepsStages>
-      <ControlButtons />
+      <ControlButtons next={next} prev={prev} reset={step === 3} />
     </>
   );
 };
