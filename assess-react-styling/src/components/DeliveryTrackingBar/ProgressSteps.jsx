@@ -82,7 +82,7 @@ const StepsStages = styled.ul`
     }
     &:first-child::before {
       width: 100%;
-      left: 65%;
+      left: 70%;
       background-color: #4d8721;
     }
     &:last-child::before {
