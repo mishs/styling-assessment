@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   position: relative;
   background-color: ##181919;
-  top: 16em;
+  top: 17.5em;
   button {
     border: none;
     :active {
